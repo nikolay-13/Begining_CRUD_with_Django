@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block page_cont %}
+    <section id="detailsPage">
+        <div class="wrapper">
+            <div class="profileText">
+
+                <h1>Are you sure you want to delete your profile?</h1>
+                <form action="{% url 'profile delete page' %}" method="post">
+
+                    <{% csrf_token %}
+                    <button class="delete-profile" type="submit">Delete</button>
+                </form>
+
+
+            </div>
+        </div>
+    </section>
+{% endblock page_cont %}
